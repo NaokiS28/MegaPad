@@ -9,7 +9,7 @@
  * 
  * Modes supported:
  *  SMS = 4 Direction, 2 Button
- *  MD3 = 4 Direction, 3 Button + Start
+ *  MD  = 4 Direction, 3 Button + Start
  *  MD6 = 4 Direction, 6 Button + Start & Mode
  *  
  */
@@ -48,7 +48,6 @@ class MegaPad{
                             // 0 means no direction pressed.
   bool readStart(); // True if Start button is pressed.
   uint8_t type();   // Returns wether SMS, MD or MD6
-  uint8_t read(uint8_t b);
   uint16_t read();  // Returns all buttons. Any unused buttons are always cleared (XYZM if in MD for example) 
   
 };

@@ -9,7 +9,7 @@
 
    Modes supported:
     SMS = 4 Direction, 2 Button
-    MD3 = 4 Direction, 3 Button + Start
+    MD  = 4 Direction, 3 Button + Start
     MD6 = 4 Direction, 6 Button + Start & Mode
 
 */
@@ -195,12 +195,6 @@ uint16_t MegaPad::read() {
   unsigned int word = padButtons[1] * 256 + padButtons[0];
   interrupt = false;
   return word;
-}
-
-uint8_t MegaPad::read(uint8_t m){
-  readPad();
-  interrupt = false;
-  return padButtons[m];
 }
 
 void MegaPad::setMode(uint8_t m) {
